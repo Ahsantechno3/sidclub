@@ -47,6 +47,7 @@ setInterval(() => {
 let slider = document.querySelector(".slider");
 document.addEventListener("wheel", () => {
   let scroll = window.scrollY / 220;
+  if (scroll <= 0.1) scroll = 0.2;
   document.querySelector(
     ".page1"
   ).style.backgroundColor = `rgba(0, 0, 0,${scroll})`;
