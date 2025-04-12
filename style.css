@@ -34,11 +34,10 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #95c11e;
   z-index: 0;
   transition: top 0.6s ease-in-out, left 0.6s ease-in-out;
 }
-/*header + nav design */
+
 header {
   position: sticky;
   top: 0;
@@ -48,33 +47,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8%;
-  background-color: transparent;
+  padding: 1% 8%;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
   z-index: 99;
 }
+
 .logo {
   width: 180px;
   display: flex;
   justify-content: flex-start;
   z-index: 2;
 }
+
 .logo:hover {
   transform: scale(0.9);
   transition: transform 0.6s;
 }
+
 .logoimg {
   width: 100px;
-  /* margin-left: auto; */
   filter: drop-shadow(2px 2px 2px black);
 }
+
 .navigation {
   height: 100%;
   width: 90%;
+  padding: 8px 0;
   z-index: 2;
 }
+
 .navlist {
   max-width: 680px;
   height: 100%;
@@ -83,24 +86,24 @@ header {
   align-items: center;
   display: flex;
 }
+
 .navitem {
   list-style: none;
 }
+
 .navlink {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .booking {
   width: 30%;
+  min-width: 240px;
   display: flex;
   justify-content: space-evenly;
   gap: 10px;
-  font-size: 18px;
-  font-weight: 700;
 }
+
 .layerbtn {
   width: 180px;
   height: 50px;
@@ -112,7 +115,6 @@ header {
   position: relative;
   color: #fff;
   border: 3px solid green;
-  background-color: black;
   border-radius: 50px;
   overflow: hidden;
   height: 100%;
@@ -163,14 +165,17 @@ header {
 .layer span:nth-child(1) {
   background: yellowgreen;
 }
+
 .layer span:nth-child(2) {
   transform: translateY(10px);
   background: #b3e824;
 }
+
 .layer span:nth-child(3) {
   transform: translateY(20px);
   background: #039c3d;
 }
+
 .layer span:nth-child(4) {
   transform: translateY(60px);
   background: #95c11e;
@@ -208,6 +213,7 @@ header {
     opacity: 0;
   }
 }
+
 @keyframes layertitle {
   0% {
     transform: translateY(10px);
@@ -218,19 +224,24 @@ header {
     opacity: 1;
   }
 }
+
 .videobox {
   position: fixed;
-  top: 0;
   width: 100vw;
   height: 100vh;
+  top: 0;
   z-index: -1;
 }
+
 .video {
-  width: 100%;
-  object-position: cover;
+  object-position: center;
+  object-fit: cover;
 }
+
 .page1 {
+  width: 100%;
   height: 100vh;
+  padding: 0 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -238,61 +249,61 @@ header {
   text-align: center;
   color: #fff;
   z-index: 2;
+
   h1 {
     visibility: hidden;
     position: relative;
     height: 170px;
-    width: 1600px;
+    width: 100%;
+    height: fit-content;
     text-transform: uppercase;
-    line-height: 170px;
   }
+
   h2 {
-    text-transform:capitalize;
-    font-weight: 800;
+    text-transform: capitalize;
     margin: 10px 0 20px 0;
   }
+
   p {
-    width: 600px;
-    font-size: 18px;
+    max-width: 600px;
   }
 }
-.page1 {
-  background-color: rgba(0, 0, 0, 0);
-}
+
 .page1 h1::after,
 .page1 h1::before {
   visibility: visible;
   content: attr(data-content);
   width: 100%;
   position: absolute;
-  font-size: 140px;
-  font-weight: 800;
   color: #039c3d;
   z-index: 2;
 }
+
 .page1 h1::after {
   top: 0px;
   left: 0px;
   color: white;
-  text-shadow: none;
 }
+
 .page1 h1::before {
   top: -6px;
   left: -6px;
   color: black;
   -webkit-text-stroke: 2px #95c11e;
 }
+
 .scroller {
   width: 100%;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   cursor: default;
-  background-color: rgba(0, 0, 0, 1);
 }
+
 .scroller::-webkit-scrollbar {
   display: none;
 }
+
 .scrollerin {
   display: inline-block;
   position: relative;
@@ -301,23 +312,24 @@ header {
   z-index: 3;
   text-transform: uppercase;
 }
+
 .scrollerin span {
   position: relative;
   display: inline;
   color: black;
-  font-size: 140px;
-  font-weight: 800;
   text-shadow: 2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white;
   width: fit-content;
   margin-right: 40px;
 }
+
 .scrollerin span:hover {
   color: #95c11e;
   z-index: 40;
   text-shadow: 2px 2px #95c11e, -2px 2px #95c11e, 2px -2px #95c11e,
     -2px -2px #95c11e;
-    z-index: 4;
+  z-index: 4;
 }
+
 @keyframes scroller {
   from {
     transform: translateX(0);
@@ -326,51 +338,49 @@ header {
     transform: translateX(-100%);
   }
 }
+
 .aboutus {
   width: 100%;
-  height: 300px;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 100px;
-  background-color: #000;
+  gap: 30px;
+  padding: 0 10%;
 }
+
 .aboutbox {
   width: 50%;
   display: flex;
   flex-direction: column;
   color: #fff;
 }
-.abouttitle {
-  font-size: 54px;
-  font-weight: 900;
-}
+
 .aboutpara,
 .aboutnote {
-  font-size: 20px;
   margin-top: 30px;
 }
+
 .aboutimage img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   border-radius: 15px;
 }
+
 .cards {
   position: relative;
   width: 100%;
-  height: 900px;
+  padding: 0 8%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  background-color: #000;
-  z-index: 4;
+  gap: 40px;
 }
+
 .card {
-  position: relative;
-  width: 26%;
-  min-width: 450px;
+  width: 33%;
   height: 550px;
   border-radius: 15px;
   background-size: cover;
@@ -378,132 +388,142 @@ header {
 }
 
 .cardin {
+  position: relative;
   display: none;
   z-index: 3;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 150px 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  text-align: start;
+}
+.cardin h1 {
+  text-transform: uppercase;
+}
+
+.cardin p {
+  margin-top: 20px;
 }
 .card:hover .cardin {
   display: flex;
 }
-.cardin {
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 100px;
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  border-radius: 15px;
-  background-color: #95c11e;
-  text-align: start;
-}
-.cardin h1 {
-  font-size: 42px;
-  text-transform: uppercase;
-}
-.cardin p {
-  margin-top: 30px;
-  font-size: 20px;
+.rightarrow {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 50px;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  transform: translate(25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card1 p:last-child {
-  margin-bottom: 60px;
+.rightarrow:hover {
+  background-color: #fff;
 }
-.card2 p:last-child {
-  margin-bottom: 120px;
-}
-.card3 p:last-child {
-  margin-bottom: 151px;
-}
+
 .banner {
   width: 100%;
-  height: 330px;
+  max-height: 330px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(15deg, #95c11e 40%, #039c3d 100%);
   overflow: hidden;
   text-transform: uppercase;
 }
+
 .banner h1 {
-  font-size: 32px;
   font-weight: 800;
-  width: 40%;
+  width: 60%;
   text-align: center;
 }
+
 .banner img:first-child {
-  width: 270px;
+  width: 20%;
+  height: 100%;
   transform: rotate(180deg);
 }
+
 .banner img:last-child {
-  width: 270px;
+  width: 20%;
+  height: 100%;
   transform: rotate(0deg);
 }
+
 .foodpage {
   width: 100%;
-  height: 800px;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   padding: 0 10%;
-  background-color: #000;
   z-index: 3;
 }
 
 .foodbanner {
   position: relative;
-  width: 40%;
+  width: 55%;
   border-radius: 15px;
   z-index: 3;
 }
 
 .foodbox {
-  width: 60%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 0 0 5%;
 }
+
 .foodbox h1 {
-  font-size: 44px;
   font-weight: 800;
   text-transform: uppercase;
-  margin: 0 10%;
 }
+
 .foodbox p {
   width: 90%;
-  margin: 30px 10%;
-  font-size: 20px;
+  margin: 20px 0 0 0;
 }
+
 .foodbtn {
-  margin: 0 10%;
+  margin-top: 20px;
   text-transform: uppercase;
 }
-.foodbanner {
-  width: 800px;
-  height: 650px;
-}
+
 .imgbox {
-  width: 100%;
-  height: 600px;
   z-index: 3;
 }
+
 .foodbanner img {
   display: none;
   width: 100%;
-  height: 600px;
+  height: 500px;
   border-radius: 15px;
   z-index: 3;
 }
+
 .foodpageimg {
   display: block !important;
   position: absolute;
   bottom: -250px;
   left: 0px;
-  width: 220px !important;
+  width: 33% !important;
   z-index: -1 !important;
 }
+
 .foodbanner .imgbox .active {
   display: block;
 }
+
 .dots {
   width: 100%;
   height: 50px;
@@ -513,11 +533,13 @@ header {
   gap: 15px;
   z-index: 3;
 }
+
 .dotbox {
   position: relative;
   margin: 10px;
   z-index: 3;
 }
+
 .dots .dotin {
   position: absolute;
   top: -7px;
@@ -527,6 +549,7 @@ header {
   border-radius: 50%;
   background-color: #fff;
 }
+
 .dots .dotbox .outline {
   display: none;
   position: absolute;
@@ -538,6 +561,7 @@ header {
   border: 3px solid #95c11e;
   border-radius: 50%;
 }
+
 .dots .active {
   .dotin {
     background-color: #95c11e;
@@ -546,62 +570,67 @@ header {
     display: block;
   }
 }
+
 .gap {
   width: 100%;
   height: 120px;
-  background-color: #000;
+  z-index: 0;
 }
+
 .quotes {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: #000;
 }
+
 .quotes img {
   position: absolute;
   width: 100px;
 }
+
 .quotes .quote {
   display: none;
-  width: 60%;
+  width: 60vw;
   padding: 5%;
   text-align: center;
-  font-size: 26px;
 }
+
 .quotes .active {
   display: block;
 }
+
 .quotes img:first-child {
-  top: 120px;
-  left: 250px;
+  top: 20%;
+  left: 20vw;
+  transform: translate(-50%, -50%);
 }
+
 .quotes img:last-child {
-  bottom: 120px;
-  right: 250px;
+  bottom: 20%;
+  right: 20vw;
+  transform: translate(50%, 50%);
 }
+
 .cards2 {
   width: 100%;
-  height: 430px;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #000;
 }
+
 .cardbox {
-  width: 80%;
-  height: 330px;
   display: flex;
   justify-content: space-evenly;
 }
+
 .card2in {
-  width: 28%;
-  height: 220px;
-  font-size: 24px;
+  height: 260px;
   text-transform: uppercase;
   border-radius: 15px;
   display: flex;
@@ -609,23 +638,27 @@ header {
   align-items: center;
   color: #000;
   z-index: 3;
-  background-color: #95c11e;
   background-size: cover;
   background-position: center;
   background-image: none;
   transition: background-color 0.6s linear;
+  text-align: center;
 }
 
 .card2in:hover {
   color: #fff;
   background-image: var(--img);
 }
+
 .cardtitle {
+  margin: 0 5%;
   color: #fff;
-  font-size: 46px;
+  letter-spacing: 5px;
   font-weight: 900;
   transform: translateY(50px);
+  text-align: center;
 }
+
 @keyframes slideup {
   0% {
     transform: translateY(50px);
@@ -639,84 +672,488 @@ footer {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 420px;
-  background: linear-gradient(15deg, #95c11e 40%, #039c3d 100%);
+  min-height: 360px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
 .footerbox .footerlogo {
   width: 100px;
   height: 100px;
 }
+
 .footerbox {
-  width: 100%;
-  height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
+  margin-top: auto;
 }
+
 .logobox {
   display: flex;
   flex-direction: column;
   text-align: start;
-  width: 10%;
+  width: 12%;
   z-index: 3;
 }
+
 .linkbox {
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 20%;
-  font-size: 32px;
   font-weight: 800;
 }
+
 .footerbox a {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
 }
+
 .detailbox {
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 20%;
-  font-size: 20px;
   font-weight: 600;
 }
+
 .detailbox a {
-  font-size: 22px;
-  font-weight: 700;
+  font-weight: 750;
   z-index: 40;
 }
+
 .footerbox a:hover {
   color: #fff;
 }
-.copyr {
-  width: 100%;
-  height: 60px;
-  font-size: 14px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  padding: 0 10%;
-  z-index: 3;
-}
+
 .socialicons img {
   width: 50px;
   height: 50px;
   z-index: 99;
 }
+
+.copyr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 10%;
+  z-index: 3;
+  margin-top: auto;
+}
 .copyr span:last-child {
   margin-left: auto;
 }
+
 .footersideimg {
   position: absolute;
   top: 60px;
   left: -50px;
-  height: 320px;
+  width: 25%;
+  /* height: 320px; */
   transform: rotate(180deg);
   z-index: 1;
 }
-h1,h2,h3,h4,p,a,span{
-  z-index: 99;
+.page1,
+.btntitle,
+.scroller,
+.aboutus,
+.cards,
+.foodpage,
+.gap,
+.quotes,
+.cards2 {
+  background-color: black;
+}
+.circle,
+.card2in,
+.cardin {
+  background-color: #95c11e;
+}
+.banner,
+footer {
+  background: linear-gradient(15deg, #95c11e 40%, #039c3d 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+  z-index: 40;
+}
+
+header {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  height: fit-content;
+}
+.page1 h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+}
+.scrollerin {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 800;
+}
+.abouttitle {
+  font-size: clamp(1.85rem, 3.5vw, 4rem);
+}
+.quotes h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.banner h1 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.foodbox h1 {
+  font-size: clamp(1rem, 3vw, 3.5rem);
+}
+.cardin h1 {
+  font-size: clamp(1.2rem, 3vw, 3.5rem);
+}
+.card2in h2 {
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+.cardtitle h1 {
+  font-size: clamp(1.5rem, 4vw, 4.5rem);
+}
+.detailbox span {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+.linkbox a {
+  /* font-size: clamp(1rem, 2vw, 1.6rem); */
+  font-size: 1.6rem;
+}
+.copyr {
+  font-size: 14px;
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 479px) {
+}
+
+/* Small devices (phones landscape) */
+@media (min-width: 480px) and (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
+  .gap {
+    height: 80px;
+  }
+  .logoimg {
+    width: 60px;
+  }
+  .video {
+    width: 500%;
+  }
+  header {
+    flex-direction: column;
+    padding: 3%;
+  }
+  .logo {
+    margin-right: auto;
+  }
+  .booking {
+    margin-left: auto;
+  }
+  .page1 {
+    padding: 0 5%;
+  }
+  .aboutus {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .aboutbox {
+    width: 100%;
+  }
+  .aboutpara,
+  .aboutnote {
+    text-align: start;
+    margin-top: 15px;
+  }
+  .cards {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .card {
+    width: 100%;
+    height: 300px;
+  }
+  .cardin {
+    padding: 100px 10px;
+  }
+  .cardin p {
+    margin-top: 10px;
+  }
+  .rightarrow {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+  .cardbox {
+    flex-direction: column;
+    gap: 10px;
+    width: 90vw;
+  }
+  .card2in {
+    width: 100%;
+    height: 200px;
+  }
+  .foodbanner img {
+    height: 350px;
+  }
+  .foodpage {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .foodbanner {
+    width: 100%;
+  }
+  .foodbox {
+    width: 100%;
+    padding: 0;
+    p {
+      margin: 10px 0;
+    }
+  }
+  .quotes {
+    height: 280px;
+  }
+  .quotes .quote {
+    width: 90%;
+  }
+  .quotes img {
+    width: 50px;
+  }
+  .quotes img:first-child {
+    top: 10%;
+    left: 10vw;
+  }
+
+  .quotes img:last-child {
+    bottom: 10%;
+    right: 10vw;
+  }
+
+  footer {
+    padding: 5%;
+  }
+  .footerbox {
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+  .linkbox {
+    width: 100%;
+  }
+  .detailbox {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .logobox {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .socialicons {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  .copyr {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cardbox {
+    flex-direction: row;
+    width: 90vw;
+  }
+  .card2in {
+    width: 30%;
+  }
+
+  .foodbanner img {
+    height: 400px;
+  }
+  .gap {
+    height: 80px;
+  }
+
+
+  header {
+    padding: 3%;
+  }
+  .logoimg{
+    width: 80px;
+  }
+  .navigation a{
+    display: block;
+    width: 70px;
+    text-align: center;
+  }
+  .logo {
+    margin-right: auto;
+  }
+  .booking {
+    margin-left: auto;
+  }
+  .page1 {
+    padding: 0 5%;
+  }
+  .aboutus {
+    padding: 0 5%;
+    gap: 10px;
+  }
+  .aboutus img{
+    width: 100%;
+  }
+  .aboutbox {
+    width: 120%;
+  }
+  .aboutpara,
+  .aboutnote {
+    margin-top: 15px;
+  }
+  .cards {
+    padding: 0 5%;
+    gap: 10px;
+  }
+  .card {
+    width: 100%;
+    height: 400px;
+  }
+  .cardin {
+    padding: 100px 10px;
+  }
+  .cardin p {
+    margin-top: 10px;
+  }
+  .rightarrow {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+  .cardbox {
+    flex-direction: column;
+    gap: 10px;
+    width: 90vw;
+  }
+  .card2in {
+    width: 100%;
+    height: 200px;
+  }
+  .foodbanner img {
+    height: 400px;
+  }
+  .foodpage {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .foodbanner {
+    width: 100%;
+  }
+  .foodbox {
+    width: 100%;
+    padding: 0;
+    p {
+      margin: 10px 0;
+    }
+  }
+  .quotes {
+    height: 280px;
+  }
+  .quotes .quote {
+    width: 90%;
+  }
+  .quotes img {
+    width: 50px;
+  }
+  .quotes img:first-child {
+    top: 10%;
+    left: 10vw;
+  }
+
+  .quotes img:last-child {
+    bottom: 10%;
+    right: 10vw;
+  }
+
+  footer {
+    padding: 5%;
+  }
+  .footerbox {
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+  }
+  .linkbox {
+    width: 50%;
+  }
+  .detailbox {
+    width: 50%;
+    margin: 10px 0;
+  }
+  .logobox {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .socialicons {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  .copyr {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
+/* Large devices (small laptops) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .cardbox {
+    flex-direction: row;
+    width: 85vw;
+  }
+  .card2in {
+    width: 30%;
+  }
+}
+
+/* Extra large devices (desktops) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .cardbox {
+    flex-direction: row;
+    width: 90vw;
+  }
+  .card2in {
+    width: 30%;
+  }
+}
+
+/* 2XL screens (large desktops, TVs) */
+@media (min-width: 1536px) {
+  .cardbox {
+    flex-direction: row;
+    width: 80vw;
+  }
+  .card2in {
+    width: 30%;
+  }
 }
