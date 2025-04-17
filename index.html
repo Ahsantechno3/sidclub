@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clone</title>
-    <link rel="shortcut icon" href="Assests/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img
-          class="logoimg"
-          src="logo-white.svg"
-          alt="website-logo"
-        />
+        <img class="logoimg" src="logo-white.svg" alt="website-logo" />
       </div>
       <nav class="navigation">
         <ul class="navlist">
@@ -62,7 +60,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div class="videobox">
         <video class="video" autoplay loop muted src="hero.mp4"></video>
       </div>
@@ -70,13 +68,14 @@
         <h1 data-content="Eat. Drink. Play.">Eat. Drink. Play.</h1>
         <h2>This webpage is clone of Sidcup Family Golf site!</h2>
         <p>
-          Note : This clone is build for creativity purpose and this clone is no responsive webpage.
-          Sidcup Family Golf is a Toptracer driving range and crazy golf venue
-          in Sidcup, South East London. Passionate about technology, player
-          development and making golf fun and accessible to everyone.
+          Note : This clone is build for creativity purpose and this clone is no
+          responsive webpage. Sidcup Family Golf is a Toptracer driving range
+          and crazy golf venue in Sidcup, South East London. Passionate about
+          technology, player development and making golf fun and accessible to
+          everyone.
         </p>
       </div>
-      <div class="scroller">
+      <div class="scroller ">
         <div class="scrollerin">
           <span>crazy golf</span>
           <span>coffee shop</span>
@@ -90,8 +89,7 @@
           <span>Golf Lessons</span>
         </div>
       </div>
-      <div class="gap"></div>
-      <div class="aboutus">
+      <div class="aboutus ">
         <div class="aboutimageleft aboutimage">
           <img src="page2-left.avif" alt="about-left-image" />
         </div>
@@ -113,9 +111,10 @@
           <img src="page2-right.avif" alt="about-right-image" />
         </div>
       </div>
-      <div class="cards">
+      <div class="cards ">
         <div class="card card1" style="background: url(card1.avif)">
           <div class="cardin">
+            <span class="rightarrow">&#8702;</span>
             <h1>Top tracer range</h1>
             <p>
               Our range delivers the same ball-tracking technology that traces
@@ -128,11 +127,9 @@
             </p>
           </div>
         </div>
-        <div
-          class="card card2"
-          style="background-image: url(card2.webp)"
-        >
+        <div class="card card2" style="background-image: url(card2.webp)">
           <div class="cardin">
+            <span class="rightarrow">&#8702;</span>
             <h1>advanture golf</h1>
             <p>Adventure awaits you!</p>
             <p>
@@ -142,11 +139,9 @@
             </p>
           </div>
         </div>
-        <div
-          class="card card3"
-          style="background-image: url(card3.avif)"
-        >
+        <div class="card card3" style="background-image: url(card3.avif)">
           <div class="cardin">
+            <span class="rightarrow">&#8702;</span>
             <h1>golf Lessons</h1>
             <p>
               Passionate about player development, whether you are new to the
@@ -157,14 +152,14 @@
           </div>
         </div>
       </div>
-      <div class="banner">
+      <div class="banner ">
         <img src="dots-side.svg" alt="banner-dots-image1" />
         <h1>
           Sign up for Sidcup News and Special Offers Straight to Your Inbox
         </h1>
         <img src="dots-side.svg" alt="banner-dots-image2" />
       </div>
-      <div class="foodpage">
+      <div class="foodpage ">
         <div class="foodbanner">
           <img
             class="foodpageimg"
@@ -233,7 +228,6 @@
           </div>
         </div>
       </div>
-      <div class="gap"></div>
       <div class="quotes">
         <img src="quote-left.svg" alt="quote-left-image" />
 
@@ -300,7 +294,6 @@
         </div>
         <img src="quote-right.svg" alt="quote-right-image" />
       </div>
-      <div class="gap"></div>
       <div class="cards2">
         <div class="cardtitle">
           <h1>WHAT ARE YOU WAITING FOR?</h1>
@@ -326,11 +319,7 @@
       />
       <div class="footerbox">
         <div class="logobox">
-          <img
-            src="logo-white.svg"
-            alt="website-logo"
-            class="footerlogo"
-          />
+          <img src="logo-white.svg" alt="website-logo" class="footerlogo" />
           <div class="socialicons">
             <img src="facebook-svgrepo-com.svg" alt="facebook-logo" />
             <img src="insta-svgrepo-com.svg" alt="insta-logo" />
@@ -369,7 +358,8 @@
       </div>
     </footer>
     <div class="circle"></div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script src="script.js"></script>
   </body>
 </html>
