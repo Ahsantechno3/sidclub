@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --text-white: #fff;
+  --bg-black: #000;
+  --bg-yg: #95c11e;
+  --bg-g: #039c3d;
+}
 /* Scrollbar Track */
 ::-webkit-scrollbar {
   width: 12px;
@@ -11,7 +17,7 @@
 
 /* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
-  background: #95c11e;
+  background: var(--bg-yg);
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -21,7 +27,15 @@
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+  z-index: 40;
+}
 body {
   width: 100vw;
   position: relative;
@@ -36,27 +50,28 @@ body {
   border-radius: 50%;
   z-index: 0;
   transition: top 0.6s ease-in-out, left 0.6s ease-in-out;
+  background-color: var(--bg-yg);
 }
 
 header {
+  display: flex;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: 134px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1% 8%;
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-black);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
   z-index: 99;
 }
 
 .logo {
-  width: 180px;
   display: flex;
+  width: 180px;
   justify-content: flex-start;
   z-index: 2;
 }
@@ -79,12 +94,11 @@ header {
 }
 
 .navlist {
+  display: flex;
   max-width: 680px;
   height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
 }
 
 .navitem {
@@ -93,13 +107,13 @@ header {
 
 .navlink {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-white);
 }
 
 .booking {
+  display: flex;
   width: 30%;
   min-width: 240px;
-  display: flex;
   justify-content: space-evenly;
   gap: 10px;
 }
@@ -112,20 +126,21 @@ header {
 }
 
 .btntitle {
-  position: relative;
-  color: #fff;
-  border: 3px solid green;
-  border-radius: 50px;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  color: var(--text-white);
+  border: 3px solid var(--bg-g);
+  border-radius: 50px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
   z-index: 2;
+  background-color: var(--bg-black);
 }
 
 .btntitle:hover .layer span {
@@ -173,12 +188,12 @@ header {
 
 .layer span:nth-child(3) {
   transform: translateY(20px);
-  background: #039c3d;
+  background-color: var(--bg-g);
 }
 
 .layer span:nth-child(4) {
   transform: translateY(60px);
-  background: #95c11e;
+  background: var(--bg-yg);
 }
 
 .layertitle {
@@ -236,18 +251,20 @@ header {
 .video {
   object-position: center;
   object-fit: cover;
+  z-index: -1;
 }
 
 .page1 {
-  width: 100%;
-  height: 100vh;
-  padding: 0 10%;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  color: #fff;
+  width: 100%;
+  height: 100vh;
+  padding: 60px 10%;
+  color: var(--text-white);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 2;
 
   h1 {
@@ -275,21 +292,21 @@ header {
   content: attr(data-content);
   width: 100%;
   position: absolute;
-  color: #039c3d;
+  color: var(--bg-g);
   z-index: 2;
 }
 
 .page1 h1::after {
   top: 0px;
   left: 0px;
-  color: white;
+  color: var(--text-white);
 }
 
 .page1 h1::before {
   top: -6px;
   left: -6px;
   color: black;
-  -webkit-text-stroke: 2px #95c11e;
+  -webkit-text-stroke: 2px var(--bg-yg);
 }
 
 .scroller {
@@ -298,6 +315,8 @@ header {
   overflow-x: auto;
   overflow-y: hidden;
   cursor: default;
+  background-color: transparent;
+  padding: 60px 0;
 }
 
 .scroller::-webkit-scrollbar {
@@ -323,10 +342,10 @@ header {
 }
 
 .scrollerin span:hover {
-  color: #95c11e;
+  color: var(--bg-yg);
   z-index: 40;
-  text-shadow: 2px 2px #95c11e, -2px 2px #95c11e, 2px -2px #95c11e,
-    -2px -2px #95c11e;
+  text-shadow: 2px 2px var(--bg-yg), -2px 2px var(--bg-yg),
+    2px -2px var(--bg-yg), -2px -2px var(--bg-yg);
   z-index: 4;
 }
 
@@ -340,21 +359,21 @@ header {
 }
 
 .aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 30px;
-  padding: 0 10%;
+  padding: 60px 10%;
 }
 
 .aboutbox {
-  width: 50%;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  text-align: center;
+  width: 50%;
+  color: var(--text-white);
 }
 
 .aboutpara,
@@ -369,13 +388,13 @@ header {
 }
 
 .cards {
-  position: relative;
-  width: 100%;
-  padding: 0 8%;
-  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 60px 8%;
+  height: fit-content;
   gap: 40px;
 }
 
@@ -388,17 +407,18 @@ header {
 }
 
 .cardin {
+  flex-direction: column;
+  text-align: center;
   position: relative;
   display: none;
   z-index: 3;
   overflow: hidden;
-  flex-direction: column;
   justify-content: flex-start;
   padding: 150px 30px;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  text-align: start;
+  background-color: var(--bg-yg);
 }
 .cardin h1 {
   text-transform: uppercase;
@@ -411,6 +431,9 @@ header {
   display: flex;
 }
 .rightarrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -421,9 +444,6 @@ header {
   border: 2px solid black;
   border-radius: 50%;
   transform: translate(25%, -25%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .rightarrow:hover {
@@ -431,13 +451,17 @@ header {
 }
 
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-height: 330px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
   text-transform: uppercase;
+  background: linear-gradient(15deg, var(--bg-yg) 40%, var(--bg-g) 100%);
+  margin: 60px 0;
 }
 
 .banner h1 {
@@ -459,14 +483,15 @@ header {
 }
 
 .foodpage {
-  width: 100%;
-  height: fit-content;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #fff;
-  padding: 0 10%;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  color: var(--text-white);
+  padding: 60px 10%;
   z-index: 3;
+  background-color: var(--bg-black);
 }
 
 .foodbanner {
@@ -477,8 +502,8 @@ header {
 }
 
 .foodbox {
-  width: 45%;
   display: flex;
+  width: 45%;
   flex-direction: column;
   justify-content: center;
   padding: 0 0 0 5%;
@@ -506,6 +531,7 @@ header {
 .foodbanner img {
   display: none;
   width: 100%;
+  bottom: -25%;
   height: 500px;
   border-radius: 15px;
   z-index: 3;
@@ -525,11 +551,11 @@ header {
 }
 
 .dots {
-  width: 100%;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 50px;
   gap: 15px;
   z-index: 3;
 }
@@ -558,33 +584,28 @@ header {
   width: 30px;
   height: 30px;
   background-color: transparent;
-  border: 3px solid #95c11e;
+  border: 3px solid var(--bg-yg);
   border-radius: 50%;
 }
 
 .dots .active {
   .dotin {
-    background-color: #95c11e;
+    background-color: var(--bg-yg);
   }
   .outline {
     display: block;
   }
 }
 
-.gap {
-  width: 100%;
-  height: 120px;
-  z-index: 0;
-}
-
 .quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  color: var(--text-white);
+  margin: 60px 0;
 }
 
 .quotes img {
@@ -616,12 +637,14 @@ header {
 }
 
 .cards2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  background-color: var(--bg-black);
+  padding: 60px 0 120px 0;
 }
 
 .cardbox {
@@ -630,12 +653,12 @@ header {
 }
 
 .card2in {
-  height: 260px;
-  text-transform: uppercase;
-  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 260px;
+  text-transform: uppercase;
+  border-radius: 15px;
   color: #000;
   z-index: 3;
   background-size: cover;
@@ -643,19 +666,20 @@ header {
   background-image: none;
   transition: background-color 0.6s linear;
   text-align: center;
+  background-color: var(--bg-yg);
 }
 
 .card2in:hover {
-  color: #fff;
+  color: var(--text-white);
   background-image: var(--img);
 }
 
 .cardtitle {
   margin: 0 5%;
-  color: #fff;
+  color: var(--text-white);
   letter-spacing: 5px;
   font-weight: 900;
-  transform: translateY(50px);
+  /* transform: translateY(50px); */
   text-align: center;
 }
 
@@ -669,14 +693,15 @@ header {
 }
 
 footer {
+  display: flex;
   position: relative;
   overflow: hidden;
   width: 100%;
   min-height: 360px;
   height: fit-content;
-  display: flex;
   justify-content: center;
   flex-direction: column;
+  background: linear-gradient(15deg, var(--bg-yg) 40%, var(--bg-g) 100%);
 }
 
 .footerbox .footerlogo {
@@ -694,7 +719,7 @@ footer {
 .logobox {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: center;
   width: 12%;
   z-index: 3;
 }
@@ -702,7 +727,7 @@ footer {
 .linkbox {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: center;
   width: 20%;
   font-weight: 800;
 }
@@ -716,7 +741,7 @@ footer {
 .detailbox {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: center;
   width: 20%;
   font-weight: 600;
 }
@@ -727,7 +752,7 @@ footer {
 }
 
 .footerbox a:hover {
-  color: #fff;
+  color: var(--text-white);
 }
 
 .socialicons img {
@@ -737,8 +762,8 @@ footer {
 }
 
 .copyr {
-  width: 100%;
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 3px;
   padding: 10px 10%;
@@ -754,39 +779,8 @@ footer {
   top: 60px;
   left: -50px;
   width: 25%;
-  /* height: 320px; */
   transform: rotate(180deg);
   z-index: 1;
-}
-.page1,
-.btntitle,
-.scroller,
-.aboutus,
-.cards,
-.foodpage,
-.gap,
-.quotes,
-.cards2 {
-  background-color: black;
-}
-.circle,
-.card2in,
-.cardin {
-  background-color: #95c11e;
-}
-.banner,
-footer {
-  background: linear-gradient(15deg, #95c11e 40%, #039c3d 100%);
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-span {
-  z-index: 40;
 }
 
 header {
@@ -846,8 +840,8 @@ p {
 }
 
 @media (max-width: 767px) {
-  .gap {
-    height: 80px;
+  .scroller{
+    padding: 30px 0;
   }
   .logoimg {
     width: 60px;
@@ -866,11 +860,11 @@ p {
     margin-left: auto;
   }
   .page1 {
-    padding: 0 5%;
+    padding: 20px 5%;
   }
   .aboutus {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 30px 5%;
   }
   .aboutbox {
     width: 100%;
@@ -882,7 +876,7 @@ p {
   }
   .cards {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 30px 5%;
   }
   .card {
     width: 100%;
@@ -908,12 +902,15 @@ p {
     width: 100%;
     height: 200px;
   }
+  .banner{
+    margin: 30px 0;
+  }
   .foodbanner img {
     height: 350px;
   }
   .foodpage {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 30px 5%;
   }
   .foodbanner {
     width: 100%;
@@ -926,6 +923,7 @@ p {
     }
   }
   .quotes {
+    margin: 30px 0;
     height: 280px;
   }
   .quotes .quote {
@@ -943,7 +941,9 @@ p {
     bottom: 10%;
     right: 10vw;
   }
-
+.cards2{
+  padding: 30px 0;
+}
   footer {
     padding: 5%;
   }
@@ -993,14 +993,13 @@ p {
     height: 80px;
   }
 
-
   header {
     padding: 3%;
   }
-  .logoimg{
+  .logoimg {
     width: 80px;
   }
-  .navigation a{
+  .navigation a {
     display: block;
     width: 70px;
     text-align: center;
@@ -1012,13 +1011,13 @@ p {
     margin-left: auto;
   }
   .page1 {
-    padding: 0 5%;
+    padding: 40px 5%;
   }
   .aboutus {
-    padding: 0 5%;
+    padding: 40px 5%;
     gap: 10px;
   }
-  .aboutus img{
+  .aboutus img {
     width: 100%;
   }
   .aboutbox {
@@ -1029,7 +1028,7 @@ p {
     margin-top: 15px;
   }
   .cards {
-    padding: 0 5%;
+    padding: 40px 5%;
     gap: 10px;
   }
   .card {
@@ -1061,7 +1060,7 @@ p {
   }
   .foodpage {
     flex-direction: column;
-    padding: 0 5%;
+    padding: 40px 5%;
   }
   .foodbanner {
     width: 100%;
